@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap');
+
+* {
+    transition: 0.1s ease-out;
+}
+body{
+    padding: 20px;
+    background: rgb(240, 240, 240);
+}
+
+.StartMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    gap: 50px;
+}
+.LogoGraphics{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+}
+
+#hit{
+    font-family: 'Prompt';
+    font-size: 140px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: -50px;
+    
+}
+#the{
+    font-family: 'Prompt';
+    font-size: 50px;
+    font-weight: 500;
+    color: black;
+}
+#target{
+    font-family: 'Prompt';
+    font-size: 150px;
+    font-weight: 600;
+    color: red;
+    margin-top: -50px;
+    animation: scaleAnim 3s infinite;
+}
+
+@keyframes scaleAnim {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.07);}
+    100%{transform: scale(1);}
+}
+
+#startButton{
+    height: fit-content;
+    width: fit-content;
+    padding: 20px 60px;
+    background: rgb(255, 255, 255);
+    border-style: solid;
+    border: 6px solid red;
+    color: red;
+    font-family: 'Prompt';
+    font-size: 35px;
+    font-weight: 500;
+    border-radius: 10px;
+    transform-origin: center;
+    cursor: pointer;
+}
+#startButton:hover{
+    background: rgb(255, 55, 55);
+    color: white;
+    transform: scale(1.08);
+}
+#startButton:active{
+    transform: scale(0.95);
+}
+
+
+.AllContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Screen{
+    width: 80vw;
+    height: 80vh;
+    margin-top: 35px;
+    border: 3px solid black;
+    background: white;
+    border-radius: 5px;
+}
+
+.Target{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+    cursor: pointer;
+}
+.TargetChild{
+    height: 60%;
+    width: 60%;
+    border-radius: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.TargetChildTwo{
+    height: 40%;
+    width: 40%;
+    border-radius: 100%;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    align-self: center;
+}
+.Score{
+    font-family: 'Prompt', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.Score span{
+    color: red;
+}
+
+#Time{
+    font-family: 'Prompt', sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    margin: 0;
+}
+
+@keyframes beforeTimeAnim {
+    0%{font-size: 200px;}
+    100%{font-size: 150px;}
+}
+#beforeTime{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-family: 'Prompt';
+    font-weight: 500;
+    font-size: 150px;
+    transform-origin: center;
+    animation: beforeTimeAnim 1s infinite;
+}
+
+.endScreen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.endScreen p {
+    font-family: 'Prompt';
+    font-weight: 600;
+    font-size: 80px;
+    margin: 10px 0;
+    color: black;
+}
+#scoreP{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 50px;
+    font-family: 'Prompt';
+    font-weight: 400;
+    margin: 10px 0;
+    color: black;
+
+}
+#endScore{
+    font-family: 'Prompt';
+    font-size: 60px;
+    font-weight: 600;
+    color: red;
+}
+
+#replayButton{
+    height: fit-content;
+    width: fit-content;
+    padding: 20px 60px;
+    background: rgb(255, 255, 255);
+    border-style: solid;
+    border: 6px solid rgb(51, 51, 51);
+    color: rgb(51, 51, 51);
+    font-family: 'Prompt';
+    font-size: 35px;
+    font-weight: 500;
+    border-radius: 10px;
+    transform-origin: center;
+    cursor: pointer;
+}
+#replayButton:hover{
+    background: rgb(51, 51, 51);
+    color: white;
+}
+#replayButton:active{
+    transform: scale(0.95);
+}
+
+
+
+@media only screen and (max-width:500px) {
+    #hit {
+        font-size: 100px;
+    }
+    #the{
+        padding-top: 20px;
+        font-size: 35px;
+    }
+    #target{
+        font-size: 110px;
+    }
+    #startButton{
+        padding: 10px 40px;
+    }
+}

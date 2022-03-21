@@ -62,7 +62,7 @@ startButton.addEventListener('click', ()=>{
             
             setTarget(Target, randX, randY)
             
-        }, 1000)
+        }, 600)
 
         const countDown = setInterval(() => {
             Target.style.transform = "scale(1)"
@@ -78,7 +78,7 @@ startButton.addEventListener('click', ()=>{
             }
             Time -= 1
             timeHTML.innerHTML = Time
-        }, 1000);
+        }, 600);
 
 
         Target.addEventListener('click', ()=>{
@@ -91,5 +91,5 @@ startButton.addEventListener('click', ()=>{
         })
 
     }
-    } , 1000)
+    } , 600)
 })

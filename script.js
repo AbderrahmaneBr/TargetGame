@@ -78,7 +78,7 @@ startButton.addEventListener('click', ()=>{
             }
             Time -= 1
             timeHTML.innerHTML = Time
-        }, 600);
+        }, 1000);
 
 
         Target.addEventListener('click', ()=>{

@@ -35,11 +35,11 @@ var randX, randY, coefX, coefY
 startButton.addEventListener('click', ()=>{
     StartMenu.style.display = 'none'
     gameContent.style.display = 'flex'
-    
+
     const beforeTimeInterval = setInterval(()=>{
-    beforeTime -= 1
-    beforeTimeHTML.innerHTML = beforeTime
-    
+        beforeTime -= 1
+        beforeTimeHTML.innerHTML = beforeTime
+
     if(beforeTime==0){
         clearInterval(beforeTimeInterval)
         beforeTimeHTML.style.display = 'none'
@@ -62,10 +62,9 @@ startButton.addEventListener('click', ()=>{
             
             setTarget(Target, randX, randY)
             
-        }, 600)
+        }, 700)
 
         const countDown = setInterval(() => {
-            Target.style.transform = "scale(1)"
             Target.style.pointerEvents = "all"
 
             // When The Game Ends
@@ -84,12 +83,11 @@ startButton.addEventListener('click', ()=>{
         Target.addEventListener('click', ()=>{
             Score += 100
             scoreHTML.innerHTML = Score
-            Target.style.transform = "scale(1.75)"
             Target.style.opacity = '0'
             Target.style.pointerEvents = "none"
             
         })
 
     }
-    } , 600)
+}, 1000)
 })
